@@ -1,37 +1,28 @@
-function operacion(){
 
-	var resultado = document.getElementById("resultado");
-	var operaciones = document.getElementById("operacion").value;
+function operar(){
+	//Obtener el valor seleccionado
+	var formulario = document.getElementById('formulario');
+	var operaciones = document.getElementById('operacion');
+	var operacion = operaciones[operaciones.selectedIndex].value;
 
-	switch (operaciones) {
+	//Obetener los dos numeros
+	var num1 = document.getElementById('numero1').value;
+	var num2 = document.getElementById('numero2').value;
+	var resultado;
 
-	case "suma":
-		resultado = document.getElementById("num1").value + document.getElementById("num2").value;
-		break;
-
-	case "resta":
-		resultado = document.getElementById("num1").value - document.getElementById("num2").value;
-		break;	
-
-	case "multiplicacion":
-		resultado = document.getElementById("num1").value * document.getElementById("num2").value;
-		break;
-
-	case "division":
-		resultado = document.getElementById("num1").value / document.getElementById("num2").value;
-		break;
-
-	case "potencia":
-		resultado = Math.pow(document.getElementById("num1").value , document.getElementById("num2").value);
-		break;
-
-	case "raiz":
-		resultado = Math.pow(document.getElementById("num1").value , (1/document.getElementById("num2").value));	
-		break;
-
-	default:
-		resultado = "Operación no registrada";
-
+	//Realizar operacion
+	switch(operacion){
+		case("sumar"): resultado = num1 + num2; break;
+		case("restar"): resultado = num1 - num2; break;
+		case("multiplicar"): resultado = num1 * num2; break;
+		case("dividir"): resultado = num1 / num2; break;
+		case("potencia"): resultado = Math.pow(num1,num2); break;
+		case("raiz"): resultado = Math.pow(num1,(1/num2));break;
+		default: resultado = "Operación no registrada";
 	}
 
+	//Imprimir resultado
+	document.getElementById('numero1').value = resultado;
+
 }
+
