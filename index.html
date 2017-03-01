@@ -2,9 +2,30 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Ejercicio Sumaq Illary</title>
 </head>
-<body>
+<body style = "text-align: center; background-color: powderblue;" >
+<form onsubmit="calcular();return false;">
+	<h1><b>Calculo de Operaciones Consecutivas</b></h1>
+	<label for="nombre">Nombre: </label>
+	<input type="text" id ="nombre" placeholder="Ingrese Su Nombre ..." required autofocus = "autofocus" height = "100" ><br><br>
+	<label for="numero1">Ingrese Número 1: </label>
+	<input type="number" id = "num2" placeholder="Ingrese número de 0 a 10" min= "0" max = "10" required autofocus = "autofocus"><br><br>
+	<label for="operaciones">Operaciones</label>
+	<select name="operaciones" id="operacion" required>
+		<option value="">Seleccione Operación</option>
+		<option value="1">Suma</option>
+		<option value="2">Resta</option>
+		<option value="3">Multiplicación</option>
+		<option value="4">Divición</option>
+		<option value="5">Potencia</option>
+		<option value="6">Raiz (n1^n2)</option>
+	</select><br><br>
+	<label for="numero2">Ingrese Número 2: </label>
+	<input type="number" id = "num2" placeholder="Ingrese número de 0 a 10" min= "0" max = "10" required autofocus = "autofocus"><br><br>
+	<input type="submit" value = "Calcular">
+	<button type="reset">Limpiar</button>
+</form>
 	<script src = "assets/js/main.js"></script>
 </body>
 </html>
