@@ -1,4 +1,5 @@
 
+
 function operar(){
 	//Obtener el valor seleccionado
 	var formulario = document.getElementById('formulario');
@@ -23,6 +24,17 @@ function operar(){
 
 	//Imprimir resultado
 	document.getElementById('numero1').value = resultado;
+
+
+function continuar(operar){
+		
+		if(confirm("Si")){
+			return document.getElementById('number1').value;
+		}
+		else{
+			return document.getElementById('limpiar')
+		}
+	
 
 }
 
