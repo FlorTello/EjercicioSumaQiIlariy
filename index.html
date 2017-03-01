@@ -3,8 +3,45 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<style type="text/css">
+		body{color:black;
+			font-family: 'Verdana';
+			background: brown;
+			margin-top: 90px;
+			}
+		label{
+			margin-top: 50px;
+		}
+		div{
+			margin-left: 50px;
+		}
+	</style>
 </head>
-<body>
+<body style="text-align: center;">
+	<form action="">
+	<h1>Operando números</h1>
+	<h3>Completa la siguiente información</h3>
+	<label for="Nombre">Nombre</label>
+	<input type="text"><br><br>
+	<label for="Numero1">Número1</label>
+	<input type="number"><br><br>
+	<div><select name="selecciona operacion" id="">
+		<option value="">Selecciona operación</option>
+		<option value="Suma">Suma</option>
+		<option value="Resta">Resta</option>
+		<option value="Multiplicacion">Multiplicación</option>
+		<option value="División">División</option>
+		<option value="Potencia">Potencia</option>
+		<option value="Raíz">Raíz</option>
+	</select>
+	</div><br>
+	<label for="Numero2">Número2</label>
+	<input type="number"><br><br>
+	<button type="submit">Operar</button>
+
+
+
+	</form>
 	<script src = "assets/js/main.js"></script>
 </body>
 </html>
