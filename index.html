@@ -3,28 +3,55 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Ejercicio Sumaq Illary</title>
+	<style type="text/css">
+		body{color:black;
+			font-family: 'Verdana';
+			background: gray;
+			margin-top: 90px;
+			text-align: center;
+			}
+		table{
+			margin-left: 500px;
+			text-align: left;
+		}
+	</style>
 </head>
-<body style = "text-align: center; background-color: powderblue;" >
+<body>
 <form onsubmit="calcular();return false;">
 	<h1><b>Calculo de Operaciones Consecutivas</b></h1>
-	<label for="nombre">Nombre: </label>
-	<input type="text" id ="nombre" placeholder="Ingrese Su Nombre ..." required autofocus = "autofocus" height = "100" ><br><br>
-	<label for="numero1">Ingrese Número 1: </label>
-	<input type="number" id = "num2" placeholder="Ingrese número de 0 a 10" min= "0" max = "10" required autofocus = "autofocus"><br><br>
-	<label for="operaciones">Operaciones</label>
-	<select name="operaciones" id="operacion" required>
-		<option value="">Seleccione Operación</option>
-		<option value="1">Suma</option>
-		<option value="2">Resta</option>
-		<option value="3">Multiplicación</option>
-		<option value="4">Divición</option>
-		<option value="5">Potencia</option>
-		<option value="6">Raiz (n1^n2)</option>
-	</select><br><br>
-	<label for="numero2">Ingrese Número 2: </label>
-	<input type="number" id = "num2" placeholder="Ingrese número de 0 a 10" min= "0" max = "10" required autofocus = "autofocus"><br><br>
-	<input type="submit" value = "Calcular">
-	<button type="reset">Limpiar</button>
+	<h3><em>Completa la siguiente información</em></h3>
+	<table>
+			<tr>
+				<td><label for="nombre">Nombre: </label></td>
+				<td><input type="text" id ="nombre" placeholder="Ingrese Su Nombre ..." required autofocus = "autofocus" pattern="[a-z A-Z]+"></td>
+			</tr>
+			<tr>
+				<td><label for="numero1">Ingrese Número 1: </label></td>
+				<td><input type="number" id = "num1" placeholder="Ingrese número de 1 a 10" min= "1" max = "10" required autofocus = "autofocus"></td>
+			</tr>
+			<tr>
+				<td><label for="operaciones">Operaciones</label></td>
+				<td><select name="operaciones" id="operacion" required>
+				<option value="">Seleccione Operación</option>
+				<option value="1">Suma</option>
+				<option value="2">Resta</option>
+				<option value="3">Multiplicación</option>
+				<option value="4">Divición</option>
+				<option value="5">Potencia</option>
+				<option value="6">Raiz (n1^n2)</option>
+			</select></td>
+			</tr>
+			<tr>
+				<td><label for="numero2">Ingrese Número 2: </label></td>
+				<td><input type="number" id = "num2" placeholder="Ingrese número de 0 a 10" min= "1" max = "10" required autofocus = "autofocus"></td>
+			</tr>
+			<td><button type="submit" value = "Calcular">Operar</button></td>
+			<td><button type="reset" id = "limpiar">Limpiar</button></td>
+			</tr>
+
+	</table>	
+	
+	<div id="resultado"></div>
 </form>
 	<script src = "assets/js/main.js"></script>
 </body>
