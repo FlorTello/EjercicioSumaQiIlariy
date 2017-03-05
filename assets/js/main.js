@@ -13,6 +13,7 @@ function operar(num1,num2,operacion){
 		default: resultado = "Operación no registrada";
 	}
 	document.getElementById("num1").value = resultado;
+	document.getElementById("num1").disabled = true;
 	return resultado;
 }
 
